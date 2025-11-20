@@ -1,2 +1,7 @@
-@import 'bootstrap/scss/bootstrap';
-@import 'bootstrap-icons/font/bootstrap-icons';
+// Tailwind CSS directives
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Estilos personalizados
+@import 'custom';

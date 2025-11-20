@@ -1,48 +1,124 @@
-<div class="row">
-  <div class="col-12 text-center mb-5">
-    <h1 class="display-4" style="color: #1a5276;">Bienvenido a DOLMED</h1>
-    <p class="lead" style="color: #2ecc71;">Centro Médico Especializado en Sueros y Vitaminas Intravenosas</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-4 mb-4">
-    <div class="card dolmed-card h-100">
-      <div class="card-header text-center">
-        <h5>🩺 Consultas Médicas</h5>
-      </div>
-      <div class="card-body">
-        <p>Consulta con nuestros especialistas en medicina regenerativa y nutrición.</p>
-        <%= link_to "Reservar Cita", new_appointment_path, class: "btn dolmed-btn-primary w-100" %>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-4 mb-4">
-    <div class="card dolmed-card h-100">
-      <div class="card-header text-center">
-        <h5>💉 Sueros Intravenosos</h5>
-      </div>
-      <div class="card-body">
-        <p>Terapias de hidratación, vitaminas y minerales para revitalizar tu cuerpo.</p>
-        <%= link_to "Ver Productos", products_path, class: "btn dolmed-btn-primary w-100" %>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-4 mb-4">
-    <div class="card dolmed-card h-100">
-      <div class="card-header text-center">
-        <h5>🚨 Emergencias</h5>
-      </div>
-      <div class="card-body">
-        <p>Atención médica inmediata las 24 horas del día.</p>
-        <button class="btn dolmed-btn-emergency w-100">Llamar Emergencia</button>
-      </div>
+<!-- Hero Section -->
+<div class="bg-gradient-to-r from-[#003B5C] to-[#00A88F] text-white py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto text-center">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Bienvenido a DOLMED</h1>
+    <p class="text-xl md:text-2xl mb-8">Centro Médico Especializado en Sueros y Vitaminas Intravenosas</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <%= link_to "Reservar Cita", new_appointment_path, class: "bg-white text-[#003B5C] hover:bg-gray-100 font-bold py-3 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105" %>
+      <%= link_to "Nuestros Servicios", services_path, class: "bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#003B5C] font-bold py-3 px-8 rounded-lg text-lg transition duration-300" %>
     </div>
   </div>
 </div>
 
-<div class="alert emergency-alert mt-4 p-3">
-  <strong>⚠️ Atención inmediata:</strong> Contamos con servicio de urgencias las 24 horas. No dudes en contactarnos.
+<!-- Servicios Destacados -->
+<div class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Nuestros Servicios</h2>
+      <p class="mt-4 text-xl text-gray-600">Cuidado médico especializado para tu bienestar integral</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Tarjeta 1 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
+        <div class="p-1 bg-gradient-to-r from-[#003B5C] to-[#00A88F]">
+          <div class="h-2 w-full"></div>
+        </div>
+        <div class="p-6">
+          <div class="w-16 h-16 bg-[#00A88F] bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <svg class="w-8 h-8 text-[#00A88F]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 text-center mb-3">Consultas Médicas</h3>
+          <p class="text-gray-600 text-center mb-6">Atención personalizada con especialistas en medicina regenerativa y nutrición para tu bienestar integral.</p>
+          <div class="text-center">
+            <%= link_to "Reservar Cita", new_appointment_path, class: "inline-flex items-center text-[#00A88F] font-medium hover:text-[#008c7a]" %>
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
+        <div class="p-1 bg-gradient-to-r from-[#00A88F] to-[#003B5C]">
+          <div class="h-2 w-full"></div>
+        </div>
+        <div class="p-6">
+          <div class="w-16 h-16 bg-[#00A88F] bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <svg class="w-8 h-8 text-[#00A88F]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 text-center mb-3">Sueros Intravenosos</h3>
+          <p class="text-gray-600 text-center mb-6">Terapias personalizadas de hidratación, vitaminas y minerales para revitalizar tu cuerpo y mente.</p>
+          <div class="text-center">
+            <%= link_to "Ver Productos", products_path, class: "inline-flex items-center text-[#00A88F] font-medium hover:text-[#008c7a]" %>
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
+        <div class="p-1 bg-gradient-to-r from-[#003B5C] to-[#00A88F]">
+          <div class="h-2 w-full"></div>
+        </div>
+        <div class="p-6">
+          <div class="w-16 h-16 bg-[#00A88F] bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <svg class="w-8 h-8 text-[#00A88F]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 text-center mb-3">Atención 24/7</h3>
+          <p class="text-gray-600 text-center mb-6">Servicio de urgencias disponible las 24 horas del día, los 7 días de la semana.</p>
+          <div class="text-center">
+            <a href="tel:+1234567890" class="inline-flex items-center text-[#00A88F] font-medium hover:text-[#008c7a]">
+              Llamar Ahora
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Llamado a la acción -->
+<div class="bg-[#003B5C] text-white py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl font-extrabold mb-4">¿Necesitas ayuda médica?</h2>
+    <p class="text-xl mb-8 max-w-3xl mx-auto">Nuestro equipo de profesionales está listo para atenderte con la más alta calidad y calidez humana.</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="tel:+1234567890" class="bg-white text-[#003B5C] hover:bg-gray-100 font-bold py-3 px-8 rounded-lg text-lg transition duration-300 flex items-center justify-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+        </svg>
+        Llamar Ahora
+      </a>
+      <%= link_to "Reservar Cita", new_appointment_path, class: "bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#003B5C] font-bold py-3 px-8 rounded-lg text-lg transition duration-300 flex items-center justify-center" %>
+    </div>
+  </div>
+</div>
+
+<!-- Sección de emergencia -->
+<div class="bg-red-50 border-l-4 border-red-500 p-4 my-8 mx-4 sm:mx-auto max-w-7xl rounded-r-lg">
+  <div class="flex">
+    <div class="flex-shrink-0">
+      <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+      </svg>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm text-red-700">
+        <strong class="font-medium">Atención inmediata:</strong> Contamos con servicio de urgencias las 24 horas. No dudes en contactarnos en caso de emergencia.
+      </p>
+    </div>
+  </div>
 </div>

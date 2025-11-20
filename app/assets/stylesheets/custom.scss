@@ -1,0 +1,174 @@
+// Variables de colores
+$azul-profesional: #003B5C;
+$verde-regenerativo: #00A88F;
+$blanco: #FFFFFF;
+
+// Estilos generales
+body {
+  font-family: 'Arial', sans-serif;
+  color: $azul-profesional;
+  background-color: $blanco;
+  line-height: 1.6;
+}
+
+// Barra de navegación
+.navbar {
+  background-color: $azul-profesional;
+  padding: 1rem 0;
+  
+  .navbar-brand {
+    img {
+      height: 50px;
+      width: auto;
+    }
+  }
+  
+  .nav-link {
+    color: $blanco !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: lighten($verde-regenerativo, 20%) !important;
+    }
+  }
+  
+  .btn-outline-success {
+    color: $blanco;
+    border-color: $verde-regenerativo;
+    
+    &:hover {
+      background-color: $verde-regenerativo;
+      border-color: $verde-regenerativo;
+    }
+  }
+}
+
+// Botones
+.btn-primary {
+  background-color: $azul-profesional;
+  border-color: $azul-profesional;
+  
+  &:hover, &:focus {
+    background-color: darken($azul-profesional, 10%);
+    border-color: darken($azul-profesional, 10%);
+  }
+}
+
+.btn-success {
+  background-color: $verde-regenerativo;
+  border-color: $verde-regenerativo;
+  
+  &:hover, &:focus {
+    background-color: darken($verde-regenerativo, 10%);
+    border-color: darken($verde-regenerativo, 10%);
+  }
+}
+
+// Encabezados
+h1, h2, h3, h4, h5, h6 {
+  color: $azul-profesional;
+  font-weight: 600;
+}
+
+// Enlaces
+a {
+  color: $verde-regenerativo;
+  text-decoration: none;
+  
+  &:hover {
+    color: darken($verde-regenerativo, 15%);
+    text-decoration: underline;
+  }
+}
+
+// Footer
+.footer {
+  background-color: $azul-profesional;
+  color: $blanco;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  
+  a {
+    color: $blanco;
+    
+    &:hover {
+      color: $verde-regenerativo;
+      text-decoration: none;
+    }
+  }
+  
+  .footer-logo {
+    img {
+      height: 60px;
+      width: auto;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Secciones con fondo de color
+.section-colored {
+  background-color: lighten($azul-profesional, 75%);
+  padding: 3rem 0;
+}
+
+// Tarjetas
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-header {
+    background-color: $azul-profesional;
+    color: $blanco;
+    font-weight: 600;
+    border: none;
+  }
+}
+
+// Formularios
+.form-control:focus {
+  border-color: $verde-regenerativo;
+  box-shadow: 0 0 0 0.25rem rgba(0, 168, 143, 0.25);
+}
+
+// Alertas
+.alert {
+  border: none;
+  color: $blanco;
+  
+  &.alert-success {
+    background-color: $verde-regenerativo;
+  }
+  
+  &.alert-info {
+    background-color: $azul-profesional;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 0;
+    
+    .navbar-brand img {
+      height: 40px;
+    }
+  }
+  
+  .footer {
+    text-align: center;
+    
+    .footer-logo {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

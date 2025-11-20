@@ -1,0 +1,87 @@
+<footer class="bg-[#003B5C] text-white pt-12 pb-6">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <!-- Logo y descripción -->
+      <div class="space-y-4">
+        <div class="flex items-center">
+          <%= image_tag 'LogoSF.png', alt: 'Dolmed Logo', class: 'h-12 w-auto' %>
+          <span class="ml-3 text-2xl font-bold">Dolmed</span>
+        </div>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Tu salud es nuestra prioridad. Ofrecemos atención médica de calidad con los más altos estándares.
+        </p>
+        <div class="flex space-x-4 pt-2">
+          <a href="#" class="text-gray-300 hover:text-[#00A88F] transition duration-300">
+            <i class="fab fa-facebook-f text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-300 hover:text-[#00A88F] transition duration-300">
+            <i class="fab fa-twitter text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-300 hover:text-[#00A88F] transition duration-300">
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-300 hover:text-[#00A88F] transition duration-300">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Enlaces rápidos -->
+      <div class="md:pl-8">
+        <h3 class="text-lg font-semibold mb-4 border-b border-[#00A88F] pb-2 inline-block">Enlaces Rápidos</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-300 hover:text-[#00A88F] transition duration-300 flex items-center">
+            <i class="fas fa-chevron-right text-xs mr-2 text-[#00A88F]"></i> Inicio
+          </a></li>
+          <li><a href="#servicios" class="text-gray-300 hover:text-[#00A88F] transition duration-300 flex items-center">
+            <i class="fas fa-chevron-right text-xs mr-2 text-[#00A88F]"></i> Servicios
+          </a></li>
+          <li><a href="#especialistas" class="text-gray-300 hover:text-[#00A88F] transition duration-300 flex items-center">
+            <i class="fas fa-chevron-right text-xs mr-2 text-[#00A88F]"></i> Especialistas
+          </a></li>
+          <li><a href="#contacto" class="text-gray-300 hover:text-[#00A88F] transition duration-300 flex items-center">
+            <i class="fas fa-chevron-right text-xs mr-2 text-[#00A88F]"></i> Contacto
+          </a></li>
+          <li><a href="#" class="text-gray-300 hover:text-[#00A88F] transition duration-300 flex items-center">
+            <i class="fas fa-chevron-right text-xs mr-2 text-[#00A88F]"></i> Política de Privacidad
+          </a></li>
+        </ul>
+      </div>
+
+      <!-- Información de contacto -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 border-b border-[#00A88F] pb-2 inline-block">Contáctanos</h3>
+        <div class="space-y-3">
+          <div class="flex items-start">
+            <i class="fas fa-map-marker-alt text-[#00A88F] mt-1 mr-3"></i>
+            <p class="text-gray-300 text-sm">Calle Principal #123, Ciudad, País</p>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-phone-alt text-[#00A88F] mr-3"></i>
+            <a href="tel:+1234567890" class="text-gray-300 hover:text-[#00A88F] transition duration-300">(123) 456-7890</a>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-envelope text-[#00A88F] mr-3"></i>
+            <a href="mailto:info@dolmed.com" class="text-gray-300 hover:text-[#00A88F] transition duration-300">info@dolmed.com</a>
+          </div>
+          <div class="flex items-center">
+            <i class="far fa-clock text-[#00A88F] mr-3"></i>
+            <p class="text-gray-300 text-sm">Lun - Vie: 8:00 - 20:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-700 pt-6 mt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm text-center md:text-left mb-4 md:mb-0">
+          &copy; <%= Time.current.year %> Dolmed - Clínica Médica. Todos los derechos reservados.
+        </p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-[#00A88F] text-sm transition duration-300">Términos y Condiciones</a>
+          <a href="#" class="text-gray-400 hover:text-[#00A88F] text-sm transition duration-300">Política de Privacidad</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

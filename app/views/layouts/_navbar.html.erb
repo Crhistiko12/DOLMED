@@ -1,0 +1,61 @@
+<header class="bg-[#003B5C] shadow-md">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <%= link_to root_path, class: 'flex items-center' do %>
+          <%= image_tag 'LogoSF.png', alt: 'Dolmed Logo', class: 'h-12 w-auto' %>
+          <span class="ml-3 text-white text-xl font-semibold hidden md:block">Dolmed</span>
+        <% end %>
+      </div>
+
+      <!-- Menú para pantallas grandes -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <%= link_to 'Inicio', root_path, class: 'text-white hover:text-[#00A88F] transition duration-300 font-medium' %>
+        <a href="#servicios" class="text-white hover:text-[#00A88F] transition duration-300 font-medium">Servicios</a>
+        <a href="#especialistas" class="text-white hover:text-[#00A88F] transition duration-300 font-medium">Especialistas</a>
+        <a href="#contacto" class="text-white hover:text-[#00A88F] transition duration-300 font-medium">Contacto</a>
+      </nav>
+
+      <!-- Botones de autenticación -->
+      <div class="hidden md:flex items-center space-x-4">
+        <%= link_to 'Iniciar Sesión', new_user_session_path, class: 'px-4 py-2 text-sm font-medium text-white border border-white rounded-md hover:bg-white hover:text-[#003B5C] transition duration-300' %>
+        <%= link_to 'Registrarse', new_user_registration_path, class: 'px-4 py-2 text-sm font-medium text-white bg-[#00A88F] rounded-md hover:bg-[#008c7a] transition duration-300' %>
+      </div>
+
+      <!-- Botón móvil -->
+      <div class="md:hidden">
+        <button @click="isOpen = !isOpen" class="text-white focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path v-if="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú móvil -->
+    <div x-show="isOpen" class="md:hidden bg-[#003B5C] py-4 px-4 mt-2 rounded-lg">
+      <div class="flex flex-col space-y-4">
+        <%= link_to 'Inicio', root_path, class: 'text-white hover:text-[#00A88F] transition duration-300 font-medium' %>
+        <a href="#servicios" class="text-white hover:text-[#00A88F] transition duration-300 font-medium">Servicios</a>
+        <a href="#especialistas" class="text-white hover:text-[#00A88F] transition duration-300 font-medium">Especialistas</a>
+        <a href="#contacto" class="text-white hover:text-[#00A88F] transition duration-300 font-medium mb-4">Contacto</a>
+        
+        <div class="border-t border-gray-700 pt-4">
+          <%= link_to 'Iniciar Sesión', new_user_session_path, class: 'block w-full text-center px-4 py-2 mb-2 text-sm font-medium text-white border border-white rounded-md hover:bg-white hover:text-[#003B5C] transition duration-300' %>
+          <%= link_to 'Registrarse', new_user_registration_path, class: 'block w-full text-center px-4 py-2 text-sm font-medium text-white bg-[#00A88F] rounded-md hover:bg-[#008c7a] transition duration-300' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Script para el menú móvil -->
+<script>
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('navbar', () => ({
+      isOpen: false
+    }))
+  })
+</script>

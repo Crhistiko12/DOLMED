@@ -1,0 +1,72 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full space-y-8">
+    <div class="text-center">
+      <h2 class="mt-6 text-3xl font-extrabold text-gray-900">
+        Crear una cuenta
+      </h2>
+      <p class="mt-2 text-sm text-gray-600">
+        O
+        <%= link_to 'inicia sesión', new_session_path(resource_name), class: "font-medium text-[#00A88F] hover:text-[#008c7a]" %>
+        si ya tienes una cuenta
+      </p>
+    </div>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'mt-8 space-y-6' }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      
+      <div class="rounded-md shadow-sm space-y-4">
+        <div>
+          <%= f.label :email, 'Correo electrónico', class: 'block text-sm font-medium text-gray-700' %>
+          <div class="mt-1">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", 
+                class: 'appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#00A88F] focus:border-[#00A88F] sm:text-sm' %>
+          </div>
+        </div>
+
+        <div>
+          <%= f.label :password, 'Contraseña', class: 'block text-sm font-medium text-gray-700' %>
+          <div class="mt-1">
+            <%= f.password_field :password, autocomplete: "new-password", 
+                class: 'appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#00A88F] focus:border-[#00A88F] sm:text-sm',
+                placeholder: @minimum_password_length ? "Mínimo #{@minimum_password_length} caracteres" : '' %>
+          </div>
+        </div>
+
+        <div>
+          <%= f.label :password_confirmation, 'Confirmar contraseña', class: 'block text-sm font-medium text-gray-700' %>
+          <div class="mt-1">
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", 
+                class: 'appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#00A88F] focus:border-[#00A88F] sm:text-sm' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center">
+        <input id="terms" name="terms" type="checkbox" class="h-4 w-4 text-[#00A88F] focus:ring-[#00A88F] border-gray-300 rounded" required>
+        <label for="terms" class="ml-2 block text-sm text-gray-900">
+          Acepto los <a href="#" class="text-[#00A88F] hover:text-[#008c7a]">términos y condiciones</a>
+        </label>
+      </div>
+
+      <div>
+        <%= f.submit "Crear cuenta", 
+            class: 'group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#00A88F] hover:bg-[#008c7a] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00A88F]' %>
+      </div>
+    <% end %>
+
+    <div class="mt-6">
+      <div class="relative">
+        <div class="absolute inset-0 flex items-center">
+          <div class="w-full border-t border-gray-300"></div>
+        </div>
+        <div class="relative flex justify-center text-sm">
+          <span class="px-2 bg-white text-gray-500">O regístrate con</span>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -71,4 +71,10 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+
+  # Gemfile
+gem 'tailwindcss-rails', '~> 2.0'
+
+# Gemfile
+gem 'cssbundling-rails'
 end
