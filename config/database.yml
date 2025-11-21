@@ -85,15 +85,13 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-
-
-  production:
+production:
   primary:
-    url: <%= ENV['DATABASE_URL'].presence %>
-    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+    <<: *default
+    url: <%= ENV['DATABASE_URL'] %>
   cable:
-    url: <%= ENV['DATABASE_URL'].presence %>
-    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+    <<: *default
+    url: <%= ENV['DATABASE_URL'] %>
   cache:
-    url: <%= ENV['DATABASE_URL'].presence %>
-    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+    <<: *default
+    url: <%= ENV['DATABASE_URL'] %>
