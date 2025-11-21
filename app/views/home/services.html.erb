@@ -1,29 +1,72 @@
-<div class="row">
-  <div class="col-12">
-    <h1 style="color: #1a5276;">Nuestros Servicios</h1>
-    <p class="lead" style="color: #2ecc71;">Servicios médicos especializados en DOLMED</p>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-md-6 mb-4">
-    <div class="card dolmed-card">
-      <div class="card-header">
-        <h5>💊 Medicina Regenerativa</h5>
-      </div>
-      <div class="card-body">
-        <p>Tratamientos avanzados para recuperar tu salud y vitalidad.</p>
-      </div>
+<div class="bg-gray-50 min-h-screen">
+  <!-- Hero Section -->
+  <div class="relative bg-[#003B5C] text-white py-20 overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/medical-icons.png')]"></div>
+    <div class="container mx-auto px-4 relative z-10 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Nuestros Servicios</h1>
+      <p class="text-xl md:text-2xl text-[#00A88F] font-medium max-w-2xl mx-auto">
+        Excelencia médica y tecnología avanzada para tu bienestar
+      </p>
     </div>
   </div>
-  
-  <div class="col-md-6 mb-4">
-    <div class="card dolmed-card">
-      <div class="card-header">
-        <h5>💉 Terapias Intravenosas</h5>
+
+  <!-- Services Grid -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      
+      <!-- Service Card 1 -->
+      <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden border border-gray-100 group">
+        <div class="p-8">
+          <div class="flex items-center mb-6">
+            <div class="w-14 h-14 bg-[#E6F7F5] rounded-full flex items-center justify-center mr-4 group-hover:bg-[#00A88F] transition-colors duration-300">
+              <i class="fas fa-dna text-2xl text-[#00A88F] group-hover:text-white transition-colors duration-300"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-[#003B5C]">Medicina Regenerativa</h3>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Tratamientos de vanguardia diseñados para estimular la capacidad natural de tu cuerpo para sanar y regenerarse. Recupera tu vitalidad con protocolos científicos avanzados.
+          </p>
+          <a href="#" class="inline-flex items-center text-[#00A88F] font-semibold hover:text-[#003B5C] transition-colors">
+            Más información <i class="fas fa-arrow-right ml-2 text-sm"></i>
+          </a>
+        </div>
+        <div class="h-1 w-full bg-gradient-to-r from-[#003B5C] to-[#00A88F]"></div>
       </div>
-      <div class="card-body">
-        <p>Sueros personalizados con vitaminas, minerales y antioxidantes.</p>
+
+      <!-- Service Card 2 -->
+      <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden border border-gray-100 group">
+        <div class="p-8">
+          <div class="flex items-center mb-6">
+            <div class="w-14 h-14 bg-[#E6F7F5] rounded-full flex items-center justify-center mr-4 group-hover:bg-[#00A88F] transition-colors duration-300">
+              <i class="fas fa-syringe text-2xl text-[#00A88F] group-hover:text-white transition-colors duration-300"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-[#003B5C]">Terapias Intravenosas</h3>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Cócteles de vitaminas, minerales y antioxidantes administrados directamente en tu torrente sanguíneo para una absorción máxima y resultados inmediatos en tu salud.
+          </p>
+          <a href="#" class="inline-flex items-center text-[#00A88F] font-semibold hover:text-[#003B5C] transition-colors">
+            Más información <i class="fas fa-arrow-right ml-2 text-sm"></i>
+          </a>
+        </div>
+        <div class="h-1 w-full bg-gradient-to-r from-[#003B5C] to-[#00A88F]"></div>
+      </div>
+
+    </div>
+
+    <!-- CTA Section -->
+    <div class="mt-20 text-center">
+      <div class="bg-[#003B5C] rounded-3xl p-10 md:p-16 relative overflow-hidden shadow-2xl max-w-4xl mx-auto">
+        <div class="relative z-10">
+          <h2 class="text-3xl font-bold text-white mb-4">¿Listo para mejorar tu salud?</h2>
+          <p class="text-blue-100 mb-8 text-lg">Agenda tu cita hoy mismo y comienza tu camino hacia el bienestar.</p>
+          <a href="#" class="inline-block bg-[#00A88F] text-white font-bold py-4 px-8 rounded-full hover:bg-[#008f7a] transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 duration-200">
+            Agendar Cita Ahora
+          </a>
+        </div>
+        <!-- Decorative circles -->
+        <div class="absolute top-0 left-0 -mt-10 -ml-10 w-40 h-40 bg-white opacity-5 rounded-full"></div>
+        <div class="absolute bottom-0 right-0 -mb-10 -mr-10 w-40 h-40 bg-white opacity-5 rounded-full"></div>
       </div>
     </div>
   </div>

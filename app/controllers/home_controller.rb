@@ -4,4 +4,10 @@ class HomeController < ApplicationController
 
   def services
   end
+
+  def specialists
+  end
+
+  def contact
+  end
 end
