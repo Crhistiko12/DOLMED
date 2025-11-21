@@ -85,8 +85,15 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-production:
-  <<: *default
-  database: dolmed_production
-  username: postgres
-  password: "8732328"
+
+
+  production:
+  primary:
+    url: <%= ENV['DATABASE_URL'].presence %>
+    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  cable:
+    url: <%= ENV['DATABASE_URL'].presence %>
+    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  cache:
+    url: <%= ENV['DATABASE_URL'].presence %>
+    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
