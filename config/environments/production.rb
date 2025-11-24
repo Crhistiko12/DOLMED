@@ -52,9 +52,6 @@ Rails.application.configure do
   # Use async adapter for Active Job (in-memory, no separate database needed)
   config.active_job.queue_adapter = :async
 
-  # Use async adapter for Action Cable (in-memory WebSockets)
-  config.action_cable.adapter = :async
-
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
