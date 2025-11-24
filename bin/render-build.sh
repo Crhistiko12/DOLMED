@@ -2,10 +2,6 @@
 # exit on error
 set -o errexit
 
-#!/usr/bin/env bash
-# exit on error
-set -o errexit
-
 bundle install
 # Build CSS for production (minified, no watch mode)
 npm run build:css:production
