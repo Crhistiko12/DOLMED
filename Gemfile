@@ -43,10 +43,10 @@ gem "thruster", require: false
 gem "image_processing", "~> 1.2"
 
 # Gemas para DOLMED - Clinica Médica
-gem 'devise'
-gem 'pundit'
-gem 'simple_calendar'
-gem 'stripe'
+gem "devise"
+gem "pundit"
+gem "simple_calendar"
+gem "stripe"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -71,10 +71,4 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-
-  # Gemfile
-gem 'tailwindcss-rails', '~> 2.0'
-
-# Gemfile
-gem 'cssbundling-rails'
 end
