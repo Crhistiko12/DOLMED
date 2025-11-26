@@ -2,6 +2,7 @@
   "name": "app",
   "private": true,
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "@tailwindcss/cli": "^4.1.17",
     "@tailwindcss/forms": "^0.5.9",
     "@tailwindcss/typography": "^0.5.15",
@@ -13,7 +14,7 @@
     "tailwindcss": "^4.1.17"
   },
   "scripts": {
-    "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules",
-    "build:css:production": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules --style=compressed"
+    "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules --silence-deprecation=import --silence-deprecation=global-builtin --silence-deprecation=color-functions",
+    "build:css:production": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules --style=compressed --silence-deprecation=import --silence-deprecation=global-builtin --silence-deprecation=color-functions"
   }
 }
