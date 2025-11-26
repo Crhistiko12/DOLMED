@@ -90,3 +90,11 @@ production:
   database: dolmed_production
   username: postgres
   password: "8732328"
+  url: <%= ENV["DATABASE_URL"] %>
+
+  # Solid Cable database configuration for Action Cable
+  cable:
+    <<: *default
+    database: dolmed_production
+    migrations_paths: db/cable_migrate
+    url: <%= ENV["DATABASE_URL"] %>
