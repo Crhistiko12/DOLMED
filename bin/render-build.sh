@@ -1,13 +1,21 @@
 #!/usr/bin/env bash
-
-# Exit on error
+# exit on error
 set -o errexit
 
+# Install Ruby dependencies
 bundle install
-bin/rails assets:precompile
-bin/rails assets:clean
 
-# If you have a paid instance type, we recommend moving
-# database migrations like this one from the build command
-# to the pre-deploy command:
-bin/rails db:migrate
+# Install Node.js dependencies
+yarn install
+
+# Build CSS with Bootstrap (production mode, compressed)
+yarn build:css:production
+
+# Precompile assets
+bundle exec rails assets:precompile
+
+# Clean old assets
+bundle exec rails assets:clean
+
+# Run database migrations
+bundle exec rails db:migrate
